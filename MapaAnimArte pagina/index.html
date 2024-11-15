@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <title>AnimArte</title>
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="mapdata.js"></script>
+        <script src="countrymap.js"></script>
+    </head>
+    <body>
+        <section class="portada">
+            <div class="texto">
+                <h1>AnimArte Colombia</h1>
+                <p class="descripcion">
+                    La biodiversidad colombiana enfrenta amenazas crecientes
+                    debido a factores como la deforestación y el cambio
+                    climático. La educación y sensibilización sobre las especies
+                    locales es esencial para motivar su conservación. Esta
+                    aplicación busca involucrar al usuario en un proceso
+                    interactivo que le permita conocer y valorar las especies de
+                    fauna colombiana.
+                </p>
+            </div>
+        </section>
+
+        <section class="flecha">
+            <img src="src/flecha.png" alt="flecha" />
+        </section>
+        <section class="general-mapa">
+            <!-- Capa que genera el desenfoque -->
+            <div class="content">
+                <div class="text">
+                    <div class="inputs">
+                        <!-- Botón para cargar imagen -->
+                        <button
+                            onclick="document.getElementById('imageUpload').click()"
+                        >
+                            Seleccionar imagen
+                        </button>
+                        <input
+                            type="file"
+                            id="imageUpload"
+                            accept="image/*"
+                            style="display: none"
+                            onchange="loadImage(event)"
+                        />
+
+                        <!-- Contenedor para mostrar la imagen cargada -->
+                        <div id="imageContainer">
+                            <img
+                                id="selectedImage"
+                                width="300"
+                                alt="Selecciona un imagen primero"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="map"></div>
+        </section>
+
+        <script src="ProcesamientoImagen.js"></script>
+    </body>
+</html>
